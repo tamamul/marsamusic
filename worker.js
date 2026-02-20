@@ -8,6 +8,9 @@ const INVIDIOUS_INSTANCES = [
   'https://inv.nadeko.net',
   'https://invidious.privacyredirect.com',
   'https://yewtu.be',
+  'https://invidious.snopyta.org',
+  'https://invidious.kavin.rocks',
+  'https://invidious.tiekoetter.com'
 ];
 
 const CORS_HEADERS = {
@@ -40,9 +43,11 @@ export default {
       try {
         const apiUrl = `${instance}/api/v1/videos/${videoId}?fields=adaptiveFormats,formatStreams`;
         const res = await fetch(apiUrl, {
-          headers: { 'User-Agent': 'Mozilla/5.0' },
-          signal: AbortSignal.timeout(8000),
-        });
+  headers: { 
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'
+  },
+  signal: AbortSignal.timeout(12000), // timeout sedikit lebih lama
+});
 
         if (!res.ok) {
           lastError = `${instance} → HTTP ${res.status}`;
