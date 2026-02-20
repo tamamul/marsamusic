@@ -4,13 +4,9 @@
 // =============================================
 
 const INVIDIOUS_INSTANCES = [
-  'https://invidious.nerdvpn.de',
-  'https://inv.nadeko.net',
-  'https://invidious.privacyredirect.com',
-  'https://yewtu.be',
-  'https://invidious.snopyta.org',
-  'https://invidious.kavin.rocks',
-  'https://invidious.tiekoetter.com'
+  'https://invidious.nerdvpn.de',    // paling stabil
+  'https://inv.nadeko.net',          // backup
+  'https://invidious.privacyredirect.com' // backup
 ];
 
 const CORS_HEADERS = {
